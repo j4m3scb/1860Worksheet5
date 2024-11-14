@@ -1,11 +1,11 @@
 CHIP A5Q2201817059 {
-IN v, i, y;
-OUT p;
+IN V, I, Y;
+OUT P;
 PARTS:
-Not (in=v, out=notv);
-Not (in=i, out=noti);
-Not (in=y, out=noty);
+Not (in=V, out=notv);
+Not (in=I, out=noti);
+Not (in=Y, out=noty);
 Or (a=notv, b=noti, out=x);
 Or (a=x, b=x, out=z);
-And (a=noty, b=z, out=p);
+And (a=noty, b=z, out=P);
 }
